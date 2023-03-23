@@ -12,7 +12,7 @@ import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.co
 import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
 import { CampoColoridoDirective } from './campo-colorido.directive';
 import { LikeWidgetModule } from './shared/components/like-widget/like-widget.module';
-
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -28,7 +28,8 @@ import { LikeWidgetModule } from './shared/components/like-widget/like-widget.mo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    LikeWidgetModule
+    LikeWidgetModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

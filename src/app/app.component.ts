@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
-
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 class Cliente{
   nome: String;
@@ -17,6 +17,8 @@ class Cliente{
 })
 export class AppComponent {
 
+  faCoffee = faCoffee;
+  faThumbsUp = faThumbsUp ; 
 
   cliente = new Cliente();
 
@@ -43,5 +45,10 @@ export class AppComponent {
       form.reset({profissao: ''});
   }
 
+
+  public likes : number = 0 ; 
+  public like(): void {
+      this.likes++ ; 
+  }
 
 }

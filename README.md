@@ -33,3 +33,8 @@ ng generate module shared/components/like-widget
 ng generate component  shared/components/like-widget --module=shared/components/like-widget/like-widget.module.ts 
 
 
+link : https://www.npmjs.com/package/@fortawesome/angular-fontawesome
+
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/angular-fontawesome@0.7.x
