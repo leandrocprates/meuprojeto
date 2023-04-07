@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LikeWidgetComponent } from './like-widget.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('LikeWidgetComponent', () => {
   let component: LikeWidgetComponent;
@@ -10,7 +10,7 @@ describe('LikeWidgetComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ LikeWidgetComponent ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      imports: [FontAwesomeModule],      
     })
     .compileComponents();
   });
@@ -18,10 +18,31 @@ describe('LikeWidgetComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LikeWidgetComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture.detectChanges();//chama ngOnInit()
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it ('validar se id diferente de null ao criar objeto ', () => {
+    expect(component.id).toBeTruthy();
+  });
+
+
+  it('testes component output 1 ', done => {
+      component.liked.subscribe(() => {
+        expect(true).toBeTrue();
+        done(); //informa que completou execucao do metodo 
+      });
+      component.like();
+  });
+
+
+  it('testes component output 2  ', () => {
+    spyOn(component.liked, 'emit');//espiona esse metodo 
+    component.like();
+    expect(component.liked.emit).toHaveBeenCalled();
+  });
+
 });
