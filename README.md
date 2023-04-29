@@ -27,6 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
+Instalação de componentes e services 
 
 ng generate service shared/services/unique-id.service   
 ng generate module shared/components/like-widget
@@ -38,3 +39,8 @@ link : https://www.npmjs.com/package/@fortawesome/angular-fontawesome
 npm install @fortawesome/fontawesome-svg-core
 npm install @fortawesome/free-solid-svg-icons
 npm install @fortawesome/angular-fontawesome@0.7.x
+
+
+Relatorios de execucao de teste junit 
+npm install -D karma-junit-reporter@2.0.1
+
