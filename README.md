@@ -44,3 +44,13 @@ npm install @fortawesome/angular-fontawesome@0.7.x
 Relatorios de execucao de teste junit 
 npm install -D karma-junit-reporter@2.0.1
 
+
+
+Executar testes : 
+
+npm run test -  
+
+npm run test-ci  --mostra reporte de teste executado 
+
+npm run test-coverage -- mostra cobertura de testes 
+
