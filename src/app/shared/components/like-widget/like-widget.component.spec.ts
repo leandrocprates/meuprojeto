@@ -35,7 +35,7 @@ describe('LikeWidgetComponent', () => {
         expect(true).toBeTrue();
         done(); //informa que completou execucao do metodo 
       });
-      component.like();
+      component.like();//quando chama o metodo like , executa o output acima
   });
 
 
